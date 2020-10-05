@@ -1,0 +1,24 @@
+docker run \
+    -v ~/Docker/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key \
+    -v d:/share:/home/user/share \
+    -p 2222:22 -d mysftp \
+    user::1001
+
+docker run \
+    -v ~/Docker/ssh/ssh_host_ed25519_key.pub:/home/user/.ssh/keys/ssh_host_ed25519_key.pub:ro \
+    -v d:/share:/home/user/share \
+    -p 2222:22 -d atmoz/sftp \
+    user::1001
+
+
+docker run \
+    -v ~/Docker/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key \
+    -v d:/share:/home/user/share \
+    -p 2222:22 -d mysftp \
+    user::1001
+
+
+docker run \
+    -v d:/share:/home/user/share \
+    -p 2222:22 -d atmoz/sftp \
+    user:1111:1001

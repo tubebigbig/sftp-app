@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  first-sftp:
+    image: first-sftp:1.0
+    build:
+      context: ./sftp/
+      dockerfile: Dockerfile
+    ports:
+      - 2222:22
+    volumes:
+      - ~/Docker/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key
+      - d:/share:/home/user/share
+    command: user::1001
