@@ -22,3 +22,10 @@ docker run \
     -v d:/share:/home/user/share \
     -p 2222:22 -d atmoz/sftp \
     user:1111:1001
+
+
+更新
+docker service update --image first-sftp sftp-app_first-sftp
+
+查看
+docker service ps sftp-app_first-sftp
