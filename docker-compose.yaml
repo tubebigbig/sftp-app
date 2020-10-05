@@ -8,6 +8,6 @@ services:
     ports:
       - 2222:22
     volumes:
-      - ~/Docker/ssh/ssh_host_ed25519_key:/etc/ssh/ssh_host_ed25519_key
+      - secret/ssh_host_server_ed25519_key:/etc/ssh/ssh_host_ed25519_key
       - d:/share:/home/user/share
     command: user::1001
